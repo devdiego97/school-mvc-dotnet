@@ -190,3 +190,4 @@ C:\development\backend\dotnet-mvc\school-mvc-dotnet\obj\Debug\net9.0\refint\scho
 C:\development\backend\dotnet-mvc\school-mvc-dotnet\obj\Debug\net9.0\school-mvc-dotnet.pdb
 C:\development\backend\dotnet-mvc\school-mvc-dotnet\obj\Debug\net9.0\school-mvc-dotnet.genruntimeconfig.cache
 C:\development\backend\dotnet-mvc\school-mvc-dotnet\obj\Debug\net9.0\ref\school-mvc-dotnet.dll
+C:\development\backend\dotnet-mvc\school-mvc-dotnet\obj\Debug\net9.0\school-mvc-dotnet.sourcelink.json

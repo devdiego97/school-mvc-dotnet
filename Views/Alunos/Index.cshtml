@@ -1,11 +1,30 @@
 
+
+@model List<school_mvc_dotnet.Models.Student>
+
 @{
 	ViewData["Title"]="Açôes Alunos";
+	
 }
 
 
 
 <div class="text-center">
+
     <h1 class="display-4">Faça as seguintes ações com respeito á Alunos</h1>
+	<!--<p>My Name is @ViewBag.Name  @ViewBag.LastName</p>-->
+	<!--<p>My Name is<p>My Name is @ViewData["Name"] @ViewData["LastName"]</p></p>-->
+
+
+    <ul class="list ">
+	@foreach(var  student in Model){
+	 
+      <li>Id:@student.Id</li>
+	  <li>Name:@student.Name</li>
+	  <li>lastName:@student.LastName</li>
+	  <li>Sex:@student.Sex</li>
+	}
+
+	</ul>
    
 </div>

@@ -1,3 +1,4 @@
+using System.Reflection.Metadata.Ecma335;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -5,22 +6,36 @@ using System.Threading.Tasks;
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using school_mvc_dotnet.Models;
+using school_mvc_dotnet.Database;
 
 
 namespace school_mvc_dotnet.Controllers
 {
-    public class Alunos:Controller
-    {
-        public IActionResult Index(){
-			
-			 var produtos = new List<Produto>
-			{
-				new Produto { Id = 1, Nome = "Teclado", Preco = 120 },
-				new Produto { Id = 2, Nome = "Mouse", Preco = 80 },
-				new Produto { Id = 3, Nome = "Monitor", Preco = 900 }
-			};
 
-			return View(produtos);
+
+
+
+    public class AlunosController:Controller
+	{
+
+		private AppDbContext _context;
+
+
+		public AlunosController(AppDbContext context)
+		{
+			_context = context;
+		}
+		
+		        public IActionResult Index(){
+			var students = _context.Students.ToList<Student>();
+          	
+			
+			//ViewBag.Name = "Diegoo";
+			//ViewBag.lastName = "Dutra";
+
+			//ViewData["Name"]= "Diego";
+			//ViewData["lastName"] = "Dutra Morais";
+			return View(students);
 				}
 			}
 }
