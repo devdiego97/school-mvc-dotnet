@@ -21,6 +21,10 @@ namespace school_mvc_dotnet.Models
 		[StringLength(50)]
 		public string LastName { get; set; }
 
+
+		[Required]
+		[EmailAddress]
+		public string Email{ get; set; }
 		[Required]
 		[Range(10,60)]
 		public int Age { get; set; }

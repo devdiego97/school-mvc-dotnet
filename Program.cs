@@ -1,6 +1,10 @@
 using Microsoft.EntityFrameworkCore;
 using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
 using school_mvc_dotnet.Database;
+using school_mvc_dotnet.Services;
+using school_mvc_dotnet.Services;
+
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +15,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString))
 );
 
+builder.Services.AddScoped<StudentService>();
 var app = builder.Build();
 
 
